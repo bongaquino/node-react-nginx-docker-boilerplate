@@ -1,14 +1,14 @@
 version: "3.8"
 services:
   nginx:
-    image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${APPLICATION_NAME}-nginx
+    image: 892444632159.dkr.ecr.us-east-1.amazonaws.com/nc-nvir-dev-test-nginx-01
     restart: always
     build:
       context: ./nginx
     ports:
       - "80:80"
   api:
-    image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${APPLICATION_NAME}-api
+    image: 892444632159.dkr.ecr.us-east-1.amazonaws.com/nc-nvir-dev-test-api-01
     build:
         context: ./api
     volumes:
@@ -19,7 +19,7 @@ services:
     ports:
       - "5000:5000"
   client:
-    image: ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${APPLICATION_NAME}-client
+    image: 892444632159.dkr.ecr.us-east-1.amazonaws.com/nc-nvir-dev-test-client-01
     build:
       context: ./client
     volumes:
