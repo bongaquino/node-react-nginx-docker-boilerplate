@@ -17,7 +17,7 @@ services:
     env_file:
       - ./api/dev.env
     ports:
-      - "80:5000"
+      - "5000:5000"
   client:
     image: 892444632159.dkr.ecr.us-east-1.amazonaws.com/nc-nvir-dev-test-client-01
     build:
@@ -26,4 +26,4 @@ services:
       - /app/node_modules
       - ./client:/app
     ports:
-      - "80:3000"
+      - "3000:3000"
