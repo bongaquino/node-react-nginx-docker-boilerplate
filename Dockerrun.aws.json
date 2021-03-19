@@ -5,14 +5,26 @@
       "name": "client",
       "image": "892444632159.dkr.ecr.us-east-1.amazonaws.com/nc-nvir-dev-test-client-01",
       "hostname": "client",
-      "essential": false,
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "containerPort": 80
+        }
+      ],
       "memory": 256
     },
     {
       "name": "api",
       "image": "892444632159.dkr.ecr.us-east-1.amazonaws.com/nc-nvir-dev-test-api-01",
       "hostname": "api",
-      "essential": false,
+      "essential": true,
+      "portMappings": [
+        {
+          "hostPort": 5000,
+          "containerPort": 80
+        }
+      ],
       "memory": 128
     },
     {
