@@ -23,7 +23,7 @@ services:
     build:
       context: ./client
     volumes:
-      - /app/node_modules
+      - /app/noxde_modules
       - ./client:/app
     ports:
       - "3000:3000"
