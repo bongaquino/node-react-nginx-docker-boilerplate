@@ -3,21 +3,21 @@
   "containerDefinitions": [
     {
       "name": "client",
-      "image": "892444632159.dkr.ecr.us-east-1.amazonaws.com/nc-nvir-dev-test-client-01",
+      "image": "892444632159.dkr.ecr.us-east-1.amazonaws.com/node-react-nginx-docker-boilerplate-client",
       "hostname": "client",
       "essential": false,
       "memory": 256
     },
     {
       "name": "api",
-      "image": "892444632159.dkr.ecr.us-east-1.amazonaws.com/nc-nvir-dev-test-api-01",
+      "image": "892444632159.dkr.ecr.us-east-1.amazonaws.com/node-react-nginx-docker-boilerplate-api",
       "hostname": "api",
       "essential": false,
       "memory": 128
     },
     {
       "name": "nginx",
-      "image": "892444632159.dkr.ecr.us-east-1.amazonaws.com/nc-nvir-dev-test-nginx-01",
+      "image": "892444632159.dkr.ecr.us-east-1.amazonaws.com/node-react-nginx-docker-boilerplate-nginx",
       "hostname": "nginx",
       "essential": true,
       "portMappings": [
